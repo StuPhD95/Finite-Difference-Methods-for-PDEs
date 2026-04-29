@@ -21,7 +21,7 @@ The third and final method is the *Crank-Nicolson method*, which takes an averag
 
 $$s=\frac{D h_t}{h^2_x},$$
 
-for $D>0$. In the case of the diffusion equation, $D$ represents the diffusion coefficient. For **hyperbolic problems** (e.g. the wave equation), an **explicit method** is used with the below approximations.
+such that $D>0$ represents the diffusion coefficient. For **hyperbolic problems** (e.g. the wave equation), an **explicit method** is used with the below approximations.
 
 - Central difference approximation of $\mathcal{O}(h^2_t)$ for the time derivative
 
@@ -35,7 +35,7 @@ This method is stable if and only if $s\le 1$ where
 
 $$s=\frac{c^2 h^2_t}{h^2_x},$$
 
-for $c>0$. In the case of the wave equation, $c$ represents the wave speed.
+such that $c>0$ represents the wave speed.
 
 **One-Dimensional Diffusion Equation** 
 
