@@ -1,5 +1,5 @@
 # Finite-Difference-Methods-for-PDEs
-A collection of finite difference methods for solving two common partial differential equations (PDEs), featuring implementations and comparisons. For **parabolic problems** (e.g. the diffusion equation), the first method considered is an *explicit method*, which uses the below approximations. 
+A collection of finite difference methods for solving two common classes of partial differential equations (PDEs), featuring implementations and comparisons. For **parabolic problems** (e.g. the diffusion equation), the first method considered is an *explicit method*, which uses the below approximations. 
 - Forward difference approximation of $\mathcal{O}(h_t)$ for the time derivative
 
 $$\dfrac{\partial u}{\partial t}(x_i,t_{l})\approx \dfrac{u^{l+1}_i-u^l_i}{h_t}, \quad i=1,\ldots,m, \quad  l=0,\ldots,N-1.$$
@@ -21,7 +21,9 @@ The third and final method is the *Crank-Nicolson method*, which takes an averag
 
 $$s=\frac{D h_t}{h^2_x},$$
 
-such that $D>0$ represents the diffusion coefficient. For **hyperbolic problems** (e.g. the wave equation), an **explicit method** is used with the below approximations.
+such that $D>0$ represents the diffusion coefficient. 
+
+For **hyperbolic problems** (e.g. the wave equation), an **explicit method** is used with the below approximations.
 
 - Central difference approximation of $\mathcal{O}(h^2_t)$ for the time derivative
 
@@ -39,7 +41,7 @@ such that $c>0$ represents the wave speed.
 
 **One-Dimensional Diffusion Equation** 
 
-The stability of the explicit method depends on the chosen parameter reigme. For instance, if $T=10, m=19$ and $N=20$ then $s=0.4$ and the method is stable. However, if instead $T=20$ (keeping $m$ and $N$ unchanged) then $s=0.8$ and the method is unstable. Care should be taken when defining the boundary and initial conditions of the problem. Suppose the boundary conditions are $u(x,0)=u(2,t)=20$ and the initial condition is $u(0,t)=100$. Notice that $u(0,0)$ is inconsistent (being both 20 and 100). This inconsistency does not noticiably affect the implicit method because the data value at $u(0,0)$ is not used by the implicit method. Consider the below plots of the solution with parameters $T=100, m=39$ and $N=20$. 
+The stability of the explicit method depends on the chosen parameter reigme. For instance, if $T=10, m=19$ and $N=20$ then $s=0.4$ and the method is stable. However, if instead $T=20$ (keeping $m$ and $N$ unchanged) then $s=0.8$ and the method is unstable. Care should be taken when defining the boundary and initial conditions of the problem. Suppose the boundary conditions are $u(0,t)=100$ and $u(2,t)=20$ and the initial condition is $u(x,0)=20$. Notice that $u(0,0)$ is inconsistent (being both 20 and 100). This inconsistency noticiably affects the Crank-Nicolson method but not the implicit method because the data value at $u(0,0)$ is not used by this method. Consider the below plots of the solution with parameters $T=100, m=39$ and $N=20$. 
 
 Implicit Method             |  Crank-Nicolson Method
 :-------------------------:|:-------------------------:
@@ -48,7 +50,7 @@ Implicit Method             |  Crank-Nicolson Method
 
 **One-Dimensional Wave Equation** 
 
-Physically, this problem could represent an elastic string that is stretched between two supports at $a=0$ and $b=1$. It is then set in motion so that it vibrates in a vertical plane. The wave speed is taken to be $c=2$ and the initial condition is $u(x,0)=sin(\pi x)+\sin(2\pi x)$. The plots below consider two different boundary conditions corresponding th $x=b$.  The situation on the right describes when the right-end of the string is raised with respect to time.
+Physically, this problem could represent an elastic string that is stretched between two supports at $a=0$ and $b=1$. It is then set in motion so that it vibrates in a vertical plane. The wave speed is taken to be $c=2$ and the initial condition is $u(x,0)=sin(\pi x)+\sin(2\pi x)$. The plots below consider two different boundary conditions corresponding to $x=b$.  The situation on the right describes when the right-end of the string is raised with respect to time.
 
 
 $u(1,t)=0$            |  $u(1,t)=t$
