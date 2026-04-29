@@ -4,3 +4,6 @@ A collection of finite difference methods for solving partial differential equat
 
 ** One-Dimensional Diffusion Equation ** 
 
+![Diffusion_Equation](Figures/Diffusion_Implicit_Method.png)
+![Diffusion_Equation](Figures/Diffusion_CN.png)
+
