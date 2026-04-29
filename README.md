@@ -48,4 +48,10 @@ Implicit Method             |  Crank-Nicolson Method
 
 **One-Dimensional Wave Equation** 
 
+Physically, this problem could represent an elastic string that is stretched between two supports at $a=0$ and $b=1$. It is then set in motion so that it vibrates in a vertical plane. The wave speed is taken to be $c=2$ and the initial condition is $u(x,0)=sin(\pi x)+\sin(2\pi x)$. The plots below consider two different boundary conditions corresponding th $x=b$.  The situation on the right describes when the right-end of the string is raised with respect to time.
+
+
+$u(1,t)=0$            |  $u(1,t)=t$
+:-------------------------:|:-------------------------:
+ ![Wave_Equation](Figures/Wave1.png) | ![Wave_Equation](Figures/Wave2.png) 
 
