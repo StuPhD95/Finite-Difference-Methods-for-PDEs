@@ -46,5 +46,6 @@ Implicit Method             |  Crank-Nicolson Method
  ![Diffusion_Equation](Figures/Diffusion_Implicit_Method.png) | ![Diffusion_Equation](Figures/Diffusion_CN.png) 
 
 
-
 **One-Dimensional Wave Equation** 
+
+
