@@ -39,6 +39,8 @@ such that $c>0$ represents the wave speed.
 
 **One-Dimensional Diffusion Equation** 
 
+The stability of the explicit method depends on the chosen parameter reigme. For instance, if $T=10, m=19$ and $N=20$ then $s=0.4$ and the method is stable. However, if instead $T=20$ (keeping $m$ and $N$ unchanged) then $s=0.8$ and the method is unstable. Care should be taken when defining the boundary and initial conditions of the problem. Suppose the boundary conditions are $u(x,0)=u(2,t)=20$ and the initial condition is $u(0,t)=100$. Notice that $u(0,0)$ is inconsistent (being both 20 and 100). This inconsistency does not noticiably affect the implicit method because the data value at $u(0,0)$ is not used by the implicit method. Consider the below plots of the solution with parameters $T=100, m=39$ and $N=20$. 
+
 ![Diffusion_Equation](Figures/Diffusion_Implicit_Method.png)
 
 ![Diffusion_Equation](Figures/Diffusion_CN.png)
